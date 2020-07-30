@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  price: 9.99
+  city: MyText
+  state: MyText
+  best_before: 2020-07-29 15:08:11
+
+two:
+  name: MyString
+  description: MyText
+  price: 9.99
+  city: MyText
+  state: MyText
+  best_before: 2020-07-29 15:08:11
