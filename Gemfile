@@ -5,7 +5,7 @@ ruby '2.7.1'
 
 gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
-
+gem "aws-sdk-s3"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
