@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag(@listing.image, width: 200) if @listing.image.attached? %>
+
 <p>
   <strong>Name:</strong>
   <%= @listing.name %>
@@ -30,5 +32,6 @@
   <%= @listing.best_before %>
 </p>
 
-<%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-primary"  %> |
+<%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-primary"  %>
 <%= link_to 'Back', listings_path, class: "btn btn-warning" %>
+
