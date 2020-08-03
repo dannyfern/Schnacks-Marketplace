@@ -14,3 +14,55 @@
  *= require_self
  */
  @import "bootstrap";
+
+ body {
+    background-color: #ffffff;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .navbar {
+    background-color: #5D5C61;
+  }
+  
+  .navbar-brand {
+      font-family: guardian-egyptt, georgia, serif;
+      font-weight: 400;
+      color: #8D8741;
+      font-size: 40px;
+    }
+
+.rightnav {
+    font-family: guardian-egyptt, georgia, serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 28px;
+}
+
+.centre {
+    text-align: center;
+}
+
+
+ .nav-item {
+    font-family: guardian-egyptt, georgia, serif;
+    font-weight: 400;
+    color: #070504;
+    font-size: 18px;
+}
+  
+  .navbar > li > a {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      color: #0192B5;
+    }
+  
+  .center {
+      text-align: center;
+    }
+  
+  
+  .col-md-5 {
+      font-size: 18px;
+  }
