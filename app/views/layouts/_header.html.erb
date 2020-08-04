@@ -17,15 +17,18 @@
        <a class="nav-link" href="/pages/contact">Contact</a>
       </li>
     </ul>
+
+<%#User sign in sign out navbar right features %>
       <ul class="navbar-nav ml-auto rightnav" >
+      <li class="nav-item">
         <% if user_signed_in? %>
-        <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+        <%= link_to "Edit Profile", edit_user_registration_path %>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
       <% else %>
-        <li><%= link_to "Sign Up", new_user_registration_path %></li>
-        <li><%= link_to "Sign In", new_user_session_path %></li>
+        <%= link_to "Sign Up", new_user_registration_path %>
+        <%= link_to "Sign In", new_user_session_path %>
       <% end %>
-       
+      </li>  
     </ul>
   </div>
 </nav>
