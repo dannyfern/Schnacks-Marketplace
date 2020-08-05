@@ -5,21 +5,30 @@
   <% @listings.each do |listing| %>
     <div class="col-md-5">
       <div class="thumbnail">
-        <%= image_tag(listing.image, width: 280, height: 200) if listing.image.attached? %><br>
+        <%= link_to image_tag(listing.image, width: 280, height: 200), listing if listing.image.attached? %><br>
         <div class="caption">
-          <h2><%= listing.name %><br></h2>
+          <h3><%=listing.name %><br></h3>
+          <h4><%= "Sold by: #{listing.user.name}" %></h4>
           <%= listing.description %><br>
           <%= number_to_currency(listing.price) %><br>
           <%= listing.city %><br>
           <%= listing.state %><br>
           <%= listing.best_before %><br>
-          <%= link_to 'Show', listing, class: "btn btn-success" %>
+          <%# Code for user listings validations %>
+          <% if (user_signed_in?) && (current_user == listing.user) %>
           <%= link_to 'Edit', edit_listing_path(listing), class: "btn btn-warning" %>
           <%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+          <% end %>
         </div>
       </div>
     </div>
   <% end %>
 </div>
-
+<br>
 <%= link_to 'New Listing', new_listing_path, class: "btn btn-primary" %>
+
+<% if user_signed_in? %>
+  <%= link_to 'New Listing', new_listing_path, class: "btn btn-link" %>
+<% end %>
+
+<%# link_to 'Show', listing, class: "btn btn-success" %>

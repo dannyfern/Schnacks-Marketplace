@@ -1,5 +1,8 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :check_user, only: [:edit, :update, :destroy]
+
 
   # GET /listings
   # GET /listings.json
@@ -15,6 +18,7 @@ class ListingsController < ApplicationController
   # GET /listings/new
   def new
     @listing = Listing.new
+
   end
 
   # GET /listings/1/edit
@@ -25,6 +29,7 @@ class ListingsController < ApplicationController
   # POST /listings.json
   def create
     @listing = Listing.new(listing_params)
+    @listing.user_id = current_user.id
 
     respond_to do |format|
       if @listing.save
@@ -98,3 +103,10 @@ def acceptable_image
     errors.add(:image, "File must be a JPEG or PNG")
   end
 end
+
+# User validation for listing check_user
+def check_user
+  if current_user != @listing.user
+    redirect_to root_url, alert: "This Schnack does not belong to you!"
+  end
+end 

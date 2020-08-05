@@ -42,7 +42,9 @@
   <%= @listing.best_before %>
 </p>
 
+<% if current_user == @listing.user %>
+  <%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-primary" %>
+<% end %>
 
-<%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-primary"  %>
 <%= link_to 'Back', listings_path, class: "btn btn-warning" %>
 
