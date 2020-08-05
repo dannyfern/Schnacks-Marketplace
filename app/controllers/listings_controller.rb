@@ -72,3 +72,29 @@ class ListingsController < ApplicationController
       params.require(:listing).permit(:name, :description, :price, :city, :state, :best_before, :image)
     end
 end
+
+# Image Validations
+def acceptable_image
+  return unless image.attached?
+end
+
+def acceptable_image
+  return unless image.attached?
+
+  unless image.byte_size <= 1.megabyte
+    errors.add(:image, "File is too big")
+  end
+end
+
+def acceptable_image
+  return unless image.attached?
+
+  unless image.byte_size <= 1.megabyte
+    errors.add(:image, "File is too big")
+  end
+
+  acceptable_types = ["image/jpeg", "image/png"]
+  unless acceptable_types.include?(image.content_type)
+    errors.add(:image, "File must be a JPEG or PNG")
+  end
+end
