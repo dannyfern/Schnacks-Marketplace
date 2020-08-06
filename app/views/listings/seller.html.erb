@@ -1,0 +1,32 @@
+<table class="table table-bordereed table-light">
+  <thead class="thead-dark">
+  <tr>
+    <th class="center">Image</th>
+    <th class="center">Name</th>
+    <th class="center">Description</th>
+    <th class="center">Price</th>
+    <th class="center">Action</th>
+  </tr>
+
+  <% @listings.each do |listing| %>
+      <tr>
+        <td><%= link_to image_tag(listing.image, width: 150, height: 100), listing if listing.image.attached? %><br>
+        <td><%= listing.name %></td>
+        <td><%= listing.description %></td>
+        <td><%= number_to_currency(listing.price) %></td>
+        <td>
+        <%= link_to "View", listing, class: "btn btn-link" %>
+        <%= link_to "Edit", edit_listing_path(listing), class: "btn btn-link" %><br>
+        <%= link_to 'Destroy', listing, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-link" %>
+        </td>
+      </tr>
+  <% end %>
+</table>
+
+
+
+<% if user_signed_in? %>
+  <%= link_to 'New Listing', new_listing_path, class: "btn btn-primary" %>
+<% end %>
+
+<%# link_to 'Show', listing, class: "btn btn-success" %>

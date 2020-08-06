@@ -1,9 +1,9 @@
-<p id="notice"><%= notice %></p>
-<h1> Schnacks </h1>
+<div class="jumbotron">
+</div>
 
 <div class="row">
   <% @listings.each do |listing| %>
-    <div class="col-md-5">
+    <div class="col-md-3">
       <div class="thumbnail">
         <%= link_to image_tag(listing.image, width: 280, height: 200), listing if listing.image.attached? %><br>
         <div class="caption">
@@ -14,11 +14,7 @@
           <%= listing.city %><br>
           <%= listing.state %><br>
           <%= listing.best_before %><br>
-          <%# Code for user listings validations %>
-          <% if (user_signed_in?) && (current_user == listing.user) %>
-          <%= link_to 'Edit', edit_listing_path(listing), class: "btn btn-warning" %>
-          <%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-          <% end %>
+          <%# Code for user listings validations %> 
         </div>
       </div>
     </div>
