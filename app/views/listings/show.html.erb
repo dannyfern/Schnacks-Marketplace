@@ -38,7 +38,7 @@
   <%= @listing.best_before %>
 </p>
 
-<% if current_user == @listing.user %>
+<% if current_user == @listing.user_id %>
   <%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-primary" %>
 <% end %>
 
