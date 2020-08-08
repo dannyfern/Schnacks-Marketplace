@@ -1,0 +1,27 @@
+<div class="center">
+    <h2> Schnack Purchases! </h2>
+</div>
+
+<table class="table table-bordereed table-light">
+  <thead class="thead-dark">
+  <tr>
+    <th class="center">Image</th>
+    <th class="center">Schnack</th>
+    <th class="center">Price</th>
+    <th class="center">Schnack Provider</th>
+    <th class="center">Schnack Seller</th>
+  </tr>
+
+  <% @orders.each do |order| %>
+      <tr>
+        <td><%= link_to image_tag(order.listing.image, width: 150, height: 100) %><br>
+        <td><%= order.listing.name %></td>
+        <td><%= number_to_currency(order.listing.price) %></td>
+        <td><%= order.seller.name%></td>
+        <td><%= order.created_at.strftime ("%B %-d, %Y")%>
+      </tr>
+  <% end %>
+</table>
+
+
+

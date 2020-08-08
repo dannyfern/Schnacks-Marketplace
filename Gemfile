@@ -1,3 +1,4 @@
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -7,6 +8,7 @@ gem 'bootstrap', '~> 4.5.0'
 gem 'devise'
 gem 'jquery-rails'
 gem "aws-sdk-s3"
+gem 'stripe'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

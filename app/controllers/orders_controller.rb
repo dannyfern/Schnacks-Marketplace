@@ -1,5 +1,17 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+
+# -------- Sales history page in descending order ----------
+def sales
+  @orders = Order.all.where(seller: current_user).order("created_at DESC")
+end
+
+# ------------- Puchase history page in descent order ---------------
+
+def purchases
+  @orders = Order.all.where(buyer: current_user).order("created_at DESC")
+end
 
   # GET /orders
   # GET /orders.json
@@ -15,6 +27,7 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    @listing = Listing.find(params[:listing_id])
   end
 
   # GET /orders/1/edit
@@ -23,12 +36,19 @@ class OrdersController < ApplicationController
 
   # POST /orders
   # POST /orders.json
+  # ---------- linking buyer id to current signed in user id ----------------
   def create
     @order = Order.new(order_params)
+    @listing = Listing.find(params[:listing_id])
+    @seller = @listing.user
+
+    @order.listing_id = @listing.id
+    @order.buyer_id = current_user.id
+    @order.seller_id = @seller.id
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Order was successfully created.' }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }

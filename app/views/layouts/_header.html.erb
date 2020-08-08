@@ -17,12 +17,15 @@
        <a class="nav-link" href="/pages/contact">Contact</a>
       </li>
     </ul>
+  </div>
 
 <%#User sign in sign out navbar right features %>
-      <ul class="navbar-nav ml-auto rightnav px-2" >
+    <div class="navbar-nav ml_auto">
       <li class="nav-item px-2">
         <% if user_signed_in? %>
-        <%= link_to "Your Schnacks", seller_path %>
+        <%= link_to "Sold", sales_path %>
+        <%= link_to "Purchased", purchases_path %>
+        <%= link_to "Listings", seller_path %>
         <%= link_to "Edit Profile", edit_user_registration_path %>
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
       <% else %>
@@ -30,6 +33,5 @@
         <%= link_to "Sign In", new_user_session_path %>
       <% end %>
       </li>  
-    </ul>
-  </div>
+    </div>
 </nav>
