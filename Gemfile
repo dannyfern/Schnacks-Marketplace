@@ -8,7 +8,7 @@ gem 'jquery-rails'
 gem 'bootstrap', '~> 4.5.0'
 gem 'devise'
 gem "aws-sdk-s3"
-
+gem 'stripe'
 
 
 
