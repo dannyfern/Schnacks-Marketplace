@@ -104,3 +104,24 @@
     text-decoration: none;
     color: #555;
   }
+
+// --------- This is for the footer -----------
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+/* Other Classes for Page Styling */
+
+body {
+  background: #ced9e4;
+  background: linear-gradient(to right, #94accc, #33AEFF);
+}

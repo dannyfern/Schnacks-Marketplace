@@ -20,7 +20,7 @@
   </div>
 
 <%#User sign in sign out navbar right features %>
-    <div class="navbar-nav ml_auto">
+  <div class="navbar-nav ml_auto">
       <li class="nav-item px-2">
         <% if user_signed_in? %>
         <%= link_to "Sold", sales_path %>
@@ -33,5 +33,7 @@
         <%= link_to "Sign In", new_user_session_path %>
       <% end %>
       </li>  
-    </div>
+  </div>
 </nav>
+
+
