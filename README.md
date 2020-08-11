@@ -22,9 +22,9 @@ My marketplace aims to serve people respectively in their local community by all
 
 2. The functionality and features of my application include, a web based application that users can interact with that allows users to create listings of food items they make and sell them in their respective states. Users can browse listings and also purchase any given listings with the implementation of Stripe payment. Additional features of my website include being able to track your listings, and browse your sell and purchase history on your profile. Features in the application itself included many gems including devise, which was vital to all of the validation of users, postgres which allowed me to track my database and link primary/foreign keys and AWS for image upload capabilities. 
 
-3. ![sitemap](./docs/sitemap.jpg)
+3. ![sitemap](./docs/sitemap.JPG)
 
-   ![sitemap1](./docs/sitemap1.jpg)
+   ![sitemap1](./docs/sitemap1.JPG)
 
 4. ![desktop](./docs/desktop.jpg)
 
