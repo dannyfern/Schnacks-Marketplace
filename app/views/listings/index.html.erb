@@ -21,10 +21,10 @@
   <% end %>
 </div>
 <br>
-<%= link_to 'New Listing', new_listing_path, class: "btn btn-primary" %>
+
 
 <% if user_signed_in? %>
-  <%= link_to 'New Listing', new_listing_path, class: "btn btn-link" %>
+  <%= link_to 'New Listing', new_listing_path, class: "btn btn-primary" %>
 <% end %>
 
 <%# link_to 'Show', listing, class: "btn btn-success" %>

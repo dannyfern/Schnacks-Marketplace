@@ -31,7 +31,8 @@
   }
   
   .navbar {
-    background-color: #0b5274;
+    background-color: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+
   }
   
   .navbar-brand {
@@ -100,7 +101,7 @@
   
   .social-link:hover,
   .social-link:focus {
-    background: #ddd;
+    background: rgb(155, 60, 60);
     text-decoration: none;
     color: #555;
   }
@@ -117,11 +118,12 @@ body {
 
 #sticky-footer {
   flex-shrink: none;
+  background-color: #8d8741;
 }
 
 /* Other Classes for Page Styling */
 
 body {
-  background: #ced9e4;
-  background: linear-gradient(to right, #94accc, #33AEFF);
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
+
