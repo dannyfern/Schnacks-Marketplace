@@ -26,7 +26,7 @@ My marketplace aims to serve people respectively in their local community by all
 
    ![wireschnack](./docs/sitemap1.jpg)
 
-4. Screenshots
+4. ![desktop](./docs/desktop.jpg)
 
 5. Target Audience of my website is any individual that is interested in home cooking or likes the idea of buying produce from people in their community. This also supports the idea of individuals who have concerns over the environment and food wastage who want to support individuals rather than big business in buying produced meals. 
 
@@ -70,7 +70,7 @@ My marketplace aims to serve people respectively in their local community by all
 
 ### **<u>Wire Frames</u>**
 
-![wireframes](./docs/wireframes.jpg)
+![wiresframes](./docs/wireframes.jpg)
 
 ### ***Entity Relationship Diagram***
 
@@ -85,14 +85,6 @@ Heroku as a third party application is chosen because it is feature rich in the 
 **AWS**
 
 Amazon web services apart from being one of the most cost friendly cloud computing services is also arguably the most reliable service for any company needs. Amazon web services is completely flexible with operating systems, programming languages, databases and any other services you need making it seamless when migrating to AWS in your application. Amazon web services are also known for complete reliability with 99.9% uptime on servers and completely secure infrastructure for your application. 
-
-**PostgreSQL**
-
-PostgreSQL is extensible recommended over other SQL servers due to its data models, types and structures and how scalable, secure and capable it is when developing and handling different environments compared to its counterparts. PostgreSQL has multiple other advantages of SQL too, including being more openly available to different operating systems, having more common user-defined functionality for different programming languages and handling multiple processes concurrently very well compared to its counterpart. 
-
-**Devise** 
-
-The devise gem was the most flexible solution towards having inbuilt authentication and validity on my application. Being able to install this gem was extremely easy and the docs and parameters for the rails application were also very kind to configure and initialize. There are other gems that also authenticate just like devise and work just as well (e.g Sorcery), but there is also a lot more user documentation and user experience using devise for added benefit. 
 
 ### **Detail any third party services that your *app* will use**
 
@@ -124,7 +116,7 @@ My database function simplistically in a sense, allowing users to create a profi
 
 ### **Provide your database schema design**
 
-
+![ERD](./docs/ERD.JPG)
 
 ###  **Describe the way tasks are allocated and tracked in your project**
 
